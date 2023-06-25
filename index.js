@@ -27,8 +27,8 @@ const getCircularReplacer = () => {
     return value;
   };
 };
-app.post('/wix/webhook', (req, res) => {
-  console.log("req: ", req)
+app.post('/webhook', (req, res) => {
+  console.log("req: ", req.body)
   res.send("OK");
 });
 app.listen(port, () => console.log(`Hello world app listening on port ${port}!`))
